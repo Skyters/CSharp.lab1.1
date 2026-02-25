@@ -1,31 +1,9 @@
 ﻿namespace lab1._1
 {
-    internal class Program
+    public class Logic()
     {
-
-        static void Main(string[] args)
+        public static string Result(int number)
         {
-            int number;
-            string strNumber;
-
-
-            while (true)
-            {
-                Console.Write("Введите число от 1 до 9999: ");
-                strNumber = Console.ReadLine();
-
-                number = Convert.ToInt32(strNumber);
-
-                if (number >= 1 && number <= 9999)
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("Введите корректное число");
-                }
-            }
-
             int rub = number / 100;
             int kop = number % 100;
 
@@ -72,7 +50,39 @@
                 result += " " + "0 копеек";
             }
 
-             Console.WriteLine(result);
+            return result;
+        }
+    }
+
+    internal class Program
+    {
+
+        static void Main(string[] args)
+        {
+            int number;
+            string strNumber;
+
+
+            while (true)
+            {
+                Console.Write("Введите число от 1 до 9999: ");
+                strNumber = Console.ReadLine();
+
+                number = Convert.ToInt32(strNumber);
+
+                if (number >= 1 && number <= 9999)
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Введите корректное число");
+                }
+            }
+
+            var sum = Logic.Result(number);
+
+            Console.WriteLine(sum);
         }
     }
 }

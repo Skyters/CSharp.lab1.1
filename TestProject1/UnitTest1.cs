@@ -6,14 +6,14 @@ namespace TestProject1
     public class Tests
     {
         [Test]
-        public void Test1()
+        public void TestConverting1()
         {
             var result = Logic.Converting(20);
             Assert.That(result, Is.EqualTo("20 копеек"));
         }
 
         [Test]
-        public void Test2()
+        public void TestConverting2()
         {
 
             var result = Logic.Converting(500);
@@ -21,7 +21,7 @@ namespace TestProject1
         }
 
         [Test]
-        public void Test3()
+        public void TestConverting3()
         {
 
             var result = Logic.Converting(250);

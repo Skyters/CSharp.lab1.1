@@ -8,7 +8,7 @@ namespace TestProject1
         [Test]
         public void Test1()
         {
-            var result = Logic.Result(20);
+            var result = Logic.Money(20);
             Assert.That(result, Is.EqualTo("0 рублей 20 копеек"));
         }
 
@@ -16,7 +16,7 @@ namespace TestProject1
         public void Test2()
         {
 
-            var result = Logic.Result(500);
+            var result = Logic.Money(500);
             Assert.That(result, Is.EqualTo("5 рублей 0 копеек"));
         }
 
@@ -24,7 +24,7 @@ namespace TestProject1
         public void Test3()
         {
 
-            var result = Logic.Result(250);
+            var result = Logic.Money(250);
             Assert.That(result, Is.EqualTo("2 рубля 50 копеек"));
         }
     }

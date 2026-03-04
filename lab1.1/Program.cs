@@ -2,7 +2,7 @@
 {
     public class Logic()
     {
-        public static string Result(int number)
+        public static string Money(int number)
         {
             int rub = number / 100;
             int kop = number % 100;
@@ -80,7 +80,7 @@
                 }
             }
 
-            var sum = Logic.Result(number);
+            var sum = Logic.Money(number);
 
             Console.WriteLine(sum);
         }

@@ -2,28 +2,37 @@
 {
     public class Logic()
     {
-        public static string Money(int number)
+        public static string Converting(int number)
         {
             int rub = number / 100;
             int kop = number % 100;
 
             string rubWord;
+            string result = "";
 
             if (rub % 10 == 1 && rub % 100 != 11)
             {
                 rubWord = "рубль";
+                result += rub + " " + rubWord + " ";
             }
             else if (rub % 10 >= 2 && rub % 10 <= 4)
             {
                 rubWord = "рубля";
-
+                result += rub + " " + rubWord + " ";
             }
+            else if (rub == 0)
+            {
+                rubWord = "";
+                result += "";
+            }
+
             else
             {
                 rubWord = "рублей";
+                result += rub + " " + rubWord + "";
             }
 
-            string result = rub + " " + rubWord;
+            
 
             if (kop > 0)
             {
@@ -43,11 +52,11 @@
                     wordKop = "копеек";
                 }
 
-                result += " " + kop + " " + wordKop;
+                result += kop + " " + wordKop;
             }
             else
             {
-                result += " " + "0 копеек";
+                result += "";
             }
 
             return result;
@@ -80,7 +89,7 @@
                 }
             }
 
-            var sum = Logic.Money(number);
+            var sum = Logic.Converting(number);
 
             Console.WriteLine(sum);
         }

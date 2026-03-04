@@ -8,23 +8,23 @@ namespace TestProject1
         [Test]
         public void Test1()
         {
-            var result = Logic.Money(20);
-            Assert.That(result, Is.EqualTo("0 рублей 20 копеек"));
+            var result = Logic.Converting(20);
+            Assert.That(result, Is.EqualTo("20 копеек"));
         }
 
         [Test]
         public void Test2()
         {
 
-            var result = Logic.Money(500);
-            Assert.That(result, Is.EqualTo("5 рублей 0 копеек"));
+            var result = Logic.Converting(500);
+            Assert.That(result, Is.EqualTo("5 рублей"));
         }
 
         [Test]
         public void Test3()
         {
 
-            var result = Logic.Money(250);
+            var result = Logic.Converting(250);
             Assert.That(result, Is.EqualTo("2 рубля 50 копеек"));
         }
     }

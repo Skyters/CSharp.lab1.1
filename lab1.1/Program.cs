@@ -2,7 +2,7 @@
 {
     public class Logic()
     {
-        public static string Converting(int number)
+        public static string ConversionPennyStringToRubles(int number)
         {
             int rub = number / 100;
             int kop = number % 100;
@@ -89,7 +89,7 @@
                 }
             }
 
-            var sum = Logic.Converting(number);
+            var sum = Logic.ConversionPennyStringToRubles(number);
 
             Console.WriteLine(sum);
         }

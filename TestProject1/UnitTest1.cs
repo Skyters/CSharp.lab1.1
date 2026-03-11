@@ -17,7 +17,7 @@ namespace TestProject1
         {
 
             var result = Logic.ConversionPennyStringToRubles(500);
-            Assert.That(result, Is.EqualTo("5 рублей"));
+            Assert.That(result, Is.EqualTo("5 рублей "));
         }
 
         [Test]

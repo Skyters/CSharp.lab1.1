@@ -12,24 +12,24 @@
 
             if (rub % 10 == 1 && rub % 100 != 11)
             {
-                rubWord = "рубль";
-                result += rub + " " + rubWord + " ";
+                rubWord = "рубль ";
+                result += rub + " " + rubWord;
             }
             else if (rub % 10 >= 2 && rub % 10 <= 4)
             {
-                rubWord = "рубля";
-                result += rub + " " + rubWord + " ";
+                rubWord = "рубля ";
+                result += rub + " " + rubWord;
             }
             else if (rub == 0)
             {
-                rubWord = "";
+                rubWord = " ";
                 result += "";
             }
 
             else
             {
-                rubWord = "рублей";
-                result += rub + " " + rubWord + "";
+                rubWord = "рублей ";
+                result += rub + " " + rubWord;
             }
 
             

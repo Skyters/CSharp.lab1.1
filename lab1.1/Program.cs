@@ -6,7 +6,7 @@
         {
             int rub = number / 100;
             int kop = number % 100;
-
+            
             string rubWord;
             string result = "";
 
